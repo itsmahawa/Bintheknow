@@ -11,7 +11,7 @@ export default function Familyregistration(props) {
 
   const register = async e => {
     e.preventDefault();
-
+    //waffle house
     // Check if passwords are match
     if (password !== password2) {
       alert("The passwords you entered don't match, please try it again");
