@@ -1,0 +1,153 @@
+body {
+  background-color: #05386b;
+  color: black;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  margin: 30px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.container {
+  margin: 30px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+.form-wrap {
+  background: #fff;
+  padding: 15px 25px;
+  color: #333;
+}
+
+.form-wrap h1 {
+  text-align: center;
+}
+
+.form-wrap p {
+  text-align: center;
+}
+
+.form-wrap .form-group {
+  margin-top: 15px;
+}
+
+.form-wrap .form-group label {
+  display: block;
+  color: #665;
+}
+
+.form-wrap .form-group input {
+  width: 100%;
+  padding: 5px;
+  border: #ddd 2px solid;
+  border-radius: 5px;
+}
+
+.form-wrap button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.navbar {
+  height: 50 px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .navbar-links {
+  display: flex;
+}
+
+.navbar a {
+  color: gray;
+  font-size: 10;
+  margin-right: 15px;
+}
+
+.footer {
+  position: fixed;
+  height: 30px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: #2781c6;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.parent-box {
+  width: 100%;
+  background-color: #90ccf4;
+  margin: 0px;
+  text-align: center;
+  color: #05386b;
+}
+
+.parent-box .container {
+  margin-top: 0;
+}
+
+.nonprofit-box {
+  width: 100%;
+  background-color: #05386b;
+  margin: 0px;
+  text-align: center;
+  color: #90ccf4;
+}
+
+.history-box {
+  width: 100%;
+  background-color: #90ccf4;
+  margin: 0px;
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  width: 150px;
+  height: 60px;
+}
+
+.faq-container {
+  margin-top: 75px;
+  margin-bottom: 50px;
+  border: 30px solid white;
+  background-color: white;
+  width: 900px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90%;
+}
+
+.aboutus-headline {
+  text-align: center;
+  color: #49c0fb;
+  margin-bottom: 15px;
+}
+
+.aboutus-container {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  border: 30px solid white;
+  background-color: white;
+  width: 900px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
