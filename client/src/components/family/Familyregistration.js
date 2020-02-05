@@ -11,7 +11,7 @@ export default function Familyregistration(props) {
 
   const register = async e => {
     e.preventDefault();
-    //waffle house
+
     // Check if passwords are match
     if (password !== password2) {
       alert("The passwords you entered don't match, please try it again");
@@ -66,12 +66,10 @@ export default function Familyregistration(props) {
             onChange={e => setPassword2(e.target.value)}
           />
         </div>
-        <button type="button" class="btn btn-primary">
-          Sign Up
-        </button>
-        <button type="button" class="btn btn-danger ">
+        <button className="btn btn-primary btn-block">Sign Up</button>
+        <Link className="btn btn-danger btn-block" to="/">
           Cancel
-        </button>
+        </Link>
         <p>
           Already have an account? <a href="familylogin">Login Here</a>
         </p>

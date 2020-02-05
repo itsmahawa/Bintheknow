@@ -51,7 +51,7 @@ export default function Login(props) {
             />
           </div>
           <button className="btn btn-primary btn-block">Submit </button>
-          <Link className="btn btn-danger btn-block" to="/Homepage">
+          <Link className="btn btn-danger btn-block" to="/">
             Cancel
           </Link>
         </form>
