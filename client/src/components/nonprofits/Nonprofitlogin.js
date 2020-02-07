@@ -6,11 +6,11 @@ export default function Nonprofitlogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const history = useHistory();
+  let history = useHistory();
 
   const handleLogin = async e => {
     e.preventDefault();
-    const formData = { email, password };
+    const formData = { email: email, password: password };
     const res = await axios.post("/api/user/login", formData);
     if (res.data) {
       localStorage.setItem("token", res.data.token);
@@ -50,12 +50,10 @@ export default function Nonprofitlogin() {
               }}
             />
           </div>
-          <button type="button" className="btn btn-primary">
-            Submit
-          </button>
-          <button type="button" className="btn btn-danger">
+          <button className="btn btn-primary btn-block">Submit</button>
+          <Link className="btn btn-danger btn-block" to="/">
             Cancel
-          </button>
+          </Link>
         </form>
       </div>
     </div>

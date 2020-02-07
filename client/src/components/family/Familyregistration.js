@@ -17,62 +17,60 @@ export default function Familyregistration(props) {
       alert("The passwords you entered don't match, please try it again");
       return;
     }
-    // // Check if username is taken
-    // const res = await axios.get(`/api/user?username=${username}`);
-    // if (res.data) {
-    //   alert("Username is taken, please try another one");
-    //   return;
-    // }
 
-    // Add new user into users
+    // Add new user into database
     const newUser = {
       email: email,
       password: password
     };
-    props.addUser(newUser);
-    // Navigate user into his profile
-    history.push(`/user/${newUser._id}`);
+    const res2 = await axios.post("/api/user/register", newUser);
+    localStorage.setItem("token", res2.data.token);
+
+    // Navigate user to their profile
+    history.push(`/user/${res2.data.user._id}`);
   };
 
   return (
     <div id="container">
-      <div class="form-wrap">
+      <div className="form-wrap">
         <h1 style={{ color: "grey" }}>Registration</h1>
         <p>It's free and only takes a minute</p>
-        <div class="form-group">
-          <label for="Email">Email</label>
-          <input
-            type="text"
-            placeholder="Email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
-        </div>
-        <div class="form-group">
-          <label for="Password">Password</label>
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
-        </div>
-        <div class="form-group">
-          <label for="password2">Confirm Password</label>
-          <input
-            type="password"
-            placeholder="Verify Password"
-            value={password2}
-            onChange={e => setPassword2(e.target.value)}
-          />
-        </div>
-        <button className="btn btn-primary btn-block">Sign Up</button>
-        <Link className="btn btn-danger btn-block" to="/">
-          Cancel
-        </Link>
-        <p>
-          Already have an account? <a href="familylogin">Login Here</a>
-        </p>
+        <form onSubmit={register}>
+          <div class="form-group">
+            <label for="Email">Email</label>
+            <input
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+          </div>
+          <div class="form-group">
+            <label for="Password">Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Verify Password"
+              value={password2}
+              onChange={e => setPassword2(e.target.value)}
+            />
+          </div>
+          <button className="btn btn-primary btn-block">Sign Up</button>
+          <Link className="btn btn-danger btn-block" to="/">
+            Cancel
+          </Link>
+          <p>
+            Already have an account? <a href="familylogin">Login Here</a>
+          </p>
+        </form>
       </div>
     </div>
   );

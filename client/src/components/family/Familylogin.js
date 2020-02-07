@@ -24,7 +24,7 @@ export default function Login(props) {
   return (
     <div class="container">
       <div class="form-wrap">
-        <h1 style={{ color: "grey" }}>Login</h1>
+        <h1 style={{ color: "grey" }}> Family Login</h1>
         <form onSubmit={onSubmit}>
           <div class="form-group">
             <label for="Email">Email</label>
